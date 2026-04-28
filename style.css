@@ -1,0 +1,24 @@
+#todoForm  {
+    width: 100%;
+    padding: 24px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    margin: 40px auto;
+}
+
+button{
+    min-width: 100px;
+    border: none;
+    margin: 2px;
+}
+
+.group-btn{
+    display: flex;
+    justify-content: center;
+}
+.completed{
+    color: green;
+}
+.pending{
+    color: red;
+}
