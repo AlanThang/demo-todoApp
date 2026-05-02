@@ -50,24 +50,24 @@ function render(todos) {
         return;
     }
 
-    todos.forEach(item => {
-        const card = document.createElement("div");
-        card.className = `task-card ${item.status ? "is-done" : ""}`;
-        card.innerHTML = `
-            <div class="task-check" onclick="toggleStatus('${item.id}')">
-                ${item.status ? "✓" : ""}
-            </div>
-            <div class="task-content">
-                <div class="task-title">${escHtml(item.title)}</div>
-                <div class="task-desc">${escHtml(item.description)}</div>
-                <div class="task-id">${item.id}</div>
-            </div>
-            <div class="task-actions">
-                <button class="icon-btn edit" onclick="updateTodo('${item.id}')" title="Edit">✎</button>
-                <button class="icon-btn del"  onclick="removeTodo('${item.id}')"  title="Delete">✕</button>
-            </div>
-        `;
-        taskList.appendChild(card);
+        todos.forEach(item => {
+            const card = document.createElement("div");
+            card.className = `task-card ${item.status ? "is-done" : ""}`;
+            card.innerHTML = `
+                <div class="task-check" onclick="toggleStatus('${item.id}')">
+                    ${item.status ? "✓" : ""}
+                </div>
+                <div class="task-content">
+                    <div class="task-title">${escHtml(item.title)}</div>
+                    <div class="task-desc">${escHtml(item.description)}</div>
+                    <div class="task-id">${item.id}</div>
+                </div>
+                <div class="task-actions">
+                    <button class="icon-btn edit" onclick="updateTodo('${item.id}')" title="Edit">✎</button>
+                    <button class="icon-btn del"  onclick="removeTodo('${item.id}')"  title="Delete">✕</button>
+                </div>
+            `;
+            taskList.appendChild(card);
     });
 
     save();
